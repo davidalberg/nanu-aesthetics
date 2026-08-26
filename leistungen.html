@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leistungen – Nanu Aesthetics</title>
+<meta name="description" content="Alle Behandlungen bei Nanu Aesthetics: Powder Brows, Ombré Brows, Aquarell Lips, 3D Lips sowie Brow Lifting, Lash Lifting und Remover. Natürliche, typgerechte Ergebnisse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* kompakter Seiten-Hero */
+  .hero--page{padding:100px 0 30px}
+  .hero--page h1{font-size:clamp(2.1rem,8.6vw,3.1rem);margin-top:0}
+  .hero--page .hero__img{aspect-ratio:5/4;border-radius:22px}
+  @media (min-width:860px){
+    .hero--page{padding:132px 0 46px}
+    .hero--page .hero__img{aspect-ratio:4/5;max-height:500px;order:2}
+    .hero--page .hero__grid{grid-template-columns:1fr .8fr;gap:48px}
+  }
+
+  /* Bildunterschrift im Leistungsblock */
+  .svc__cap{font-size:.78rem;color:var(--muted);margin:-2px 0 12px}
+
+  /* Desktop: Bildspalte auf ein ruhiges Format begrenzen */
+  @media (min-width:860px){
+    .svc__img{aspect-ratio:1/1;min-height:0}
+  }
+
+  /* Fuß eines Leistungsblocks: Preis, Detailseite, WhatsApp */
+  .svc__foot{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+    display:flex;flex-direction:column;gap:14px}
+  .svc__wa{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
+    min-height:48px;padding:11px 18px;border:1px solid var(--line);border-radius:999px;
+    font-size:.88rem;font-weight:700;color:var(--espresso);text-decoration:none;
+    transition:border-color .25s ease,color .25s ease}
+  .svc__wa:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .svc__wa .wa-icon{width:17px;height:17px;color:var(--accent)}
+
+  /* Zusatzleistungen */
+  .extras{display:grid;gap:14px;margin-top:26px}
+  @media (min-width:760px){.extras{grid-template-columns:repeat(3,1fr)}}
+  .extra{background:var(--ivory-deep);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 18px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
+  .extra h3{font-size:1.08rem;font-weight:700;margin-bottom:6px}
+  .extra p{font-size:.92rem;line-height:1.6;color:var(--espresso-soft);margin-bottom:14px}
+  .extra__price{font-size:.9rem;font-weight:700;color:var(--accent-deep);
+    font-variant-numeric:tabular-nums;margin-top:auto}
+  .extra__price span{display:block;font-weight:500;font-size:.82rem;color:var(--muted)}
+  .extra .svc__link{margin-top:12px}
+  .extras__note{margin-top:18px;font-size:.88rem;color:var(--muted)}
+  .extras__img{aspect-ratio:16/10;margin-top:26px;box-shadow:var(--shadow-soft)}
+
+  /* Enthalten-Liste */
+  .incl{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:18px}
+  .incl li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--espresso-soft)}
+  .incl li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;
+    background:var(--accent);margin-top:9px}
+  .incl strong{color:var(--espresso);font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Nanu <span>Aesthetics</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav__links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="leistungen.html" aria-current="page">Leistungen</a></li>
+        <li><a href="preise.html">Preise</a></li>
+        <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="mobilemenu" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobilemenu" id="mobilemenu" aria-label="Mobiles Menü">
+  <ul>
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+<!-- ================= HERO (kompakt) ================= -->
+<section class="hero hero--page">
+  <svg class="orn" style="top:-40px;right:-70px;width:min(72vw,380px)" viewBox="0 0 420 620" fill="none" aria-hidden="true">
+    <path d="M370 -20 C300 160 180 260 150 400 C130 500 170 580 260 640" stroke="#A9906E" stroke-width="1.3" fill="none"/>
+    <path d="M410 60 C330 210 240 300 215 430" stroke="#C2A878" stroke-width="1.1" fill="none"/>
+    <circle cx="150" cy="400" r="4.5" fill="#C2A878"/>
+  </svg>
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <h1>Leistungen</h1>
+        <p class="hero__sub">Dich erwarten natürliche, elegante und typgerechte Ergebnisse, die individuell auf dich abgestimmt werden. Ob definierte Lippen, harmonische Brows oder ein frischer, gepflegter Look – das Ziel ist immer ein Ergebnis, das zu dir passt und nicht künstlich wirkt.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20gern%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+            Jetzt Termin sichern
+          </a>
+          <a class="btn btn--ghost" href="preise.html">Alle Preise ansehen</a>
+        </div>
+      </div>
+      <div class="imgwrap hero__img">
+        <img src="bilder/najra-3.jpeg" alt="Najra im Detail, Blick auf Augen und Brauen, Schwarzweiß-Aufnahme" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WARUM PMU ================= -->
+<section class="section" aria-labelledby="why-title" style="padding-bottom:0">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="h2" id="why-title">Warum Permanent Make-up</h2>
+      <p class="lead">Permanent Make-up kann im Alltag einen großen Unterschied machen. Es schenkt dir mehr Frische, spart Zeit am Morgen und gibt dir das gute Gefühl, schon beim Aufstehen gepflegt und strahlend auszusehen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIE 4 PMU-BEHANDLUNGEN ================= -->
+<section class="section" id="pmu" aria-labelledby="pmu-title">
+  <div class="container">
+    <div class="reveal">
+      <span class="kicker">Permanent Make-up</span>
+      <h2 class="h2" id="pmu-title">Vier Behandlungen,<br>ein Ziel: dein Look</h2>
+      <p class="lead">Jede Behandlung dauert etwa zwei bis drei Stunden, inklusive Beratung, Vorzeichnung und Farbabstimmung. Die Nachbehandlung nach vier bis sechs Wochen kostet 50 Euro.</p>
+    </div>
+
+    <div class="services__list">
+
+      <!-- Powder Brows -->
+      <article class="svc reveal">
+        <div class="svc__img">
+          <img src="bilder/powder-brows.jpeg" alt="Abgeheilte Powder Brows in Nahaufnahme, weicher Puderlook" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Powder Brows</h3>
+          <p class="svc__cap">Abgeheiltes Ergebnis</p>
+          <p>Der weiche Puderlook wirkt wie sanft geschminkte Brauen. Deine Brauen bekommen Definition und einen klaren Rahmen, ohne harte Kanten und ohne künstliche Wirkung. Die Technik funktioniert auf den meisten Hauttypen.</p>
+          <div class="chips">
+            <span class="chip">ca. 2 bis 3 Stunden</span>
+            <span class="chip">hält 1 bis 3 Jahre</span>
+            <span class="chip">Nachbehandlung 50 €</span>
+          </div>
+          <div class="svc__foot">
+            <div class="svc__row">
+              <div class="svc__price">300 €</div>
+              <a class="svc__link" href="powder-brows.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="svc__wa" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Powder%20Brows." target="_blank" rel="noopener">
+              <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+              Powder Brows anfragen
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ombré Brows -->
+      <article class="svc reveal">
+        <div class="svc__img">
+          <img src="bilder/powder-brows-frisch.jpeg" alt="Brauen mit weichem Farbverlauf, frisch pigmentiert" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Ombré Brows</h3>
+          <p class="svc__cap">Frisch pigmentiert, direkt nach der Behandlung</p>
+          <p>Beim Ombré-Verlauf ist der vordere Bereich zart und wird nach hinten intensiver. Das wirkt ausdrucksstärker als Powder Brows und bleibt trotzdem weich. Form und Intensität stimmen wir vor dem Stechen gemeinsam ab.</p>
+          <div class="chips">
+            <span class="chip">ca. 2 bis 3 Stunden</span>
+            <span class="chip">hält 1 bis 3 Jahre</span>
+            <span class="chip">Nachbehandlung 50 €</span>
+          </div>
+          <div class="svc__foot">
+            <div class="svc__row">
+              <div class="svc__price">300 €</div>
+              <a class="svc__link" href="ombre-brows.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="svc__wa" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ombr%C3%A9%20Brows." target="_blank" rel="noopener">
+              <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+              Ombré Brows anfragen
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Aquarell Lips -->
+      <article class="svc reveal">
+        <div class="svc__img">
+          <img src="bilder/aquarell-lips.jpeg" alt="Aquarell Lips, zart pigmentierte Lippen, frisch nach der Behandlung" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Aquarell Lips</h3>
+          <p class="svc__cap">Frisch pigmentiert, direkt nach der Behandlung</p>
+          <p>Eine zarte, transparente Lippenpigmentierung für einen frischen, gesunden Farbton. Das Ergebnis wirkt wie ein Hauch Farbe und nicht wie aufgetragener Lippenstift. Den Ton wähle ich passend zu deinem Hautton und deiner natürlichen Lippenfarbe.</p>
+          <div class="chips">
+            <span class="chip">ca. 2 bis 3 Stunden</span>
+            <span class="chip">hält 1 bis 3 Jahre</span>
+            <span class="chip">Nachbehandlung 50 €</span>
+          </div>
+          <div class="svc__foot">
+            <div class="svc__row">
+              <div class="svc__price">300 €</div>
+              <a class="svc__link" href="aquarell-lips.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="svc__wa" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Aquarell%20Lips." target="_blank" rel="noopener">
+              <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+              Aquarell Lips anfragen
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3D Lips -->
+      <article class="svc reveal">
+        <div class="svc__img">
+          <img src="bilder/3d-lips-abgeheilt.jpeg" alt="3D Lips abgeheilt, definierte Kontur mit weicher Schattierung" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>3D Lips</h3>
+          <p class="svc__cap">Abgeheiltes Ergebnis</p>
+          <p>Eine definierte Kontur und eine feine Schattierung lassen die Lippen voller wirken, ganz ohne Filler und ohne Aufspritzen. In den ersten Tagen ist das Ergebnis intensiver, nach etwa vier Wochen zeigt sich der weichere, natürliche Endton.</p>
+          <div class="chips">
+            <span class="chip">ca. 2 bis 3 Stunden</span>
+            <span class="chip">hält 1 bis 3 Jahre</span>
+            <span class="chip">Nachbehandlung 50 €</span>
+          </div>
+          <div class="svc__foot">
+            <div class="svc__row">
+              <div class="svc__price">300 €</div>
+              <a class="svc__link" href="3d-lips.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="svc__wa" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%203D%20Lips." target="_blank" rel="noopener">
+              <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+              3D Lips anfragen
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ZUSATZLEISTUNGEN ================= -->
+<section class="trust section" aria-labelledby="extra-title">
+  <svg class="orn" style="top:-30px;left:-60px;width:min(60vw,320px)" viewBox="0 0 350 500" fill="none" aria-hidden="true">
+    <path d="M-20 60 C90 110 170 190 196 300 C212 372 200 440 150 500" stroke="#A9906E" stroke-width="1.3" fill="none"/>
+    <circle cx="196" cy="300" r="4.5" fill="#C2A878"/>
+  </svg>
+  <div class="container">
+    <div class="reveal">
+      <span class="kicker">Zusatzleistungen</span>
+      <h2 class="h2" id="extra-title">Liftings und Remover</h2>
+      <p class="lead">Kleine Behandlungen mit sichtbarem Effekt, gut kombinierbar mit deinem Permanent Make-up oder ganz allein.</p>
+    </div>
+
+    <div class="extras">
+      <div class="extra reveal">
+        <h3>Brow Lifting</h3>
+        <p>Die Härchen werden sanft in Form gelegt, dadurch wirken die Brauen dichter und geordneter. Auf Wunsch zusätzlich mit Färben.</p>
+        <p class="extra__price">55 €<span>mit Färben 65 €</span></p>
+        <a class="svc__link" href="liftings-remover.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="extra reveal">
+        <h3>Lash Lifting</h3>
+        <p>Deine eigenen Wimpern werden aufgerichtet, der Blick wirkt offener und wacher. Ohne Verlängerung und ohne fremdes Haar.</p>
+        <p class="extra__price">55 €<span>mit Färben 65 €</span></p>
+        <a class="svc__link" href="liftings-remover.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="extra reveal">
+        <h3>Remover</h3>
+        <p>Ältere oder nicht mehr passende Pigmentierungen lassen sich schrittweise aufhellen. Wie viele Sitzungen nötig sind, schauen wir vorher gemeinsam an.</p>
+        <p class="extra__price">120 €<span>pro Sitzung</span></p>
+        <a class="svc__link" href="liftings-remover.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <p class="extras__note reveal">Kombi-Paket Lash &amp; Brow Lifting mit Färben: 120 €. Alle Preise findest du auch in der <a href="preise.html" style="color:var(--accent-deep)">Preisübersicht</a>.</p>
+
+    <div class="imgwrap extras__img reveal"><span class="hl-frame"><span class="hl-v"></span></span>
+      <img src="bilder/remover-behandlung.jpeg" alt="Ruhiger Behandlungsmoment im Studio, Kundin liegt entspannt" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= IN JEDEM TERMIN ENTHALTEN ================= -->
+<section class="section" aria-labelledby="incl-title">
+  <div class="container">
+    <div class="teaser__grid">
+      <div class="imgwrap reveal"><span class="hl-frame"><span class="hl-v"></span></span>
+        <img src="bilder/najra-2.jpeg" alt="Najra, Inhaberin von Nanu Aesthetics, Schwarzweiß-Porträt" loading="lazy">
+      </div>
+      <div class="reveal">
+        <h2 class="h2" id="incl-title">Was in jedem Termin enthalten ist</h2>
+        <p class="lead">Bei jeder Behandlung gehen wir dieselben Schritte gemeinsam durch, damit das Ergebnis wirklich zu dir passt.</p>
+        <ul class="incl">
+          <li><span><strong>Persönliche Beratung</strong> zu Form, Farbe und Wirkung, ganz ohne Druck.</span></li>
+          <li><span><strong>Vermessung und Vorzeichnung</strong>, damit du dein Ergebnis siehst, bevor es dauerhaft wird.</span></li>
+          <li><span><strong>Farbabstimmung</strong> auf deinen Hautton.</span></li>
+          <li><span><strong>Die Behandlung selbst</strong>, in Ruhe und mit Zeit für Pausen.</span></li>
+          <li><span><strong>Pflegehinweise für zuhause</strong>, damit die Abheilung gut verläuft.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section" id="kontakt" style="padding-top:0" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="finalcta reveal">
+      <h2 id="cta-title">Welche Behandlung passt <em style="color:var(--accent-deep)">zu dir</em>?</h2>
+      <p>Schreib mir, was du dir vorstellst. Wir schauen gemeinsam, was zu deinem Gesicht passt.</p>
+      <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20gern%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+        Jetzt Termin sichern
+      </a>
+      <p class="finalcta__note">Alle Preise im Detail findest du auf der Seite <a href="preise.html">Preise</a>. Echte Ergebnisse zeigt dir <a href="meine-arbeit.html">Meine Arbeit</a>.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__logo">Nanu <span>Aesthetics</span></p>
+    <p class="footer__tag">Weil du es verdienst, dich schön zu fühlen – jeden Tag.</p>
+    <div class="footer__grid">
+      <div>
+        <h4>Menü</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="preise.html">Preise</a></li>
+          <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Behandlungen</h4>
+        <ul>
+          <li><a href="powder-brows.html">Powder Brows</a></li>
+          <li><a href="ombre-brows.html">Ombré Brows</a></li>
+          <li><a href="aquarell-lips.html">Aquarell Lips</a></li>
+          <li><a href="3d-lips.html">3D Lips</a></li>
+          <li><a href="liftings-remover.html">Liftings &amp; Remover</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://wa.me/491700000000" target="_blank" rel="noopener">WhatsApp schreiben</a></li>
+          <li><a href="kontakt.html">Kontaktseite</a></li>
+        </ul>
+        <p class="footer__note" style="margin-top:12px">Termine nach Vereinbarung.</p>
+        <h4 style="margin-top:18px">Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nanu Aesthetics</span>
+      <span>Permanent Make-up &amp; Beauty</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY CTA (mobile) ================= -->
+<div class="stickycta" id="stickycta">
+  <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20gern%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">
+    <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+    Jetzt Termin sichern
+  </a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

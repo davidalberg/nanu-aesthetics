@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt – Nanu Aesthetics</title>
+<meta name="description" content="Termin oder Beratung für Permanent Make-up bei Nanu Aesthetics: am schnellsten über WhatsApp. Home-Studio in Köln-Nippes, Termine nach Vereinbarung.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Kompakte Kopf-Sektion für Unterseiten */
+  .hero--compact{padding:104px 0 10px}
+  .hero--compact h1{font-size:clamp(2rem,7.6vw,3rem);margin:0 0 12px}
+  .hero--compact .hero__sub{margin-bottom:0}
+  @media (min-width:860px){.hero--compact{padding:150px 0 16px}}
+  /* Kontakt-Karte */
+  .ct-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 20px;box-shadow:var(--shadow-soft);max-width:560px;margin-top:26px;
+  }
+  .ct-card h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+  .ct-card p{font-size:.93rem;color:var(--espresso-soft)}
+  .ct-btns{display:flex;flex-direction:column;gap:12px;margin:18px 0 4px}
+  .ct-note{font-size:.85rem;color:var(--muted);margin-top:14px}
+  .ct-ways{list-style:none;margin-top:20px;border-top:1px solid var(--line)}
+  .ct-ways li{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;
+    padding:14px 0;min-height:52px;border-bottom:1px solid var(--line);
+  }
+  .ct-ways .ct-label{
+    flex:none;width:96px;font-size:.72rem;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent-deep);
+  }
+  .ct-ways .ct-val{font-size:.95rem;color:var(--espresso-soft)}
+  .ct-ways a{color:var(--espresso);text-decoration:underline;text-underline-offset:3px}
+  /* Was du mir schreibst */
+  .tips{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:12px;max-width:620px}
+  .tips li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--espresso-soft)}
+  .tips li::before{
+    content:"";flex:none;width:7px;height:7px;border-radius:50%;
+    background:var(--accent);margin-top:9px;
+  }
+  @media (min-width:860px){
+    .ct-btns{flex-direction:row}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Nanu <span>Aesthetics</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav__links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="preise.html">Preise</a></li>
+        <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="mobilemenu" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobilemenu" id="mobilemenu" aria-label="Mobiles Menü">
+  <ul>
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+<!-- ================= KOPF ================= -->
+<section class="hero hero--compact">
+  <svg class="orn" style="top:-30px;right:-70px;width:min(70vw,380px)" viewBox="0 0 420 620" fill="none" aria-hidden="true">
+    <path d="M370 -20 C300 160 180 260 150 400 C130 500 170 580 260 640" stroke="#A9906E" stroke-width="1.3" fill="none"/>
+    <path d="M410 60 C330 210 240 300 215 430" stroke="#C2A878" stroke-width="1.1" fill="none"/>
+    <circle cx="150" cy="400" r="4.5" fill="#C2A878"/>
+  </svg>
+  <div class="container">
+    <div class="hero__text">
+      <h1>Kontakt</h1>
+      <p class="hero__sub">Schreib mir einfach, ich melde mich persönlich bei dir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT-WEGE ================= -->
+<section class="section" style="padding-bottom:0" aria-labelledby="ways-title">
+  <div class="container">
+    <div class="reveal">
+      <span class="kicker">Direkter Weg</span>
+      <h2 class="h2" id="ways-title">Am schnellsten über WhatsApp</h2>
+      <p class="lead">Eine kurze Nachricht reicht. Du musst kein Formular ausfüllen und nichts vorbereiten, wir klären alles im Gespräch.</p>
+    </div>
+
+    <div class="ct-card reveal">
+      <h3>WhatsApp</h3>
+      <p>Die Nachricht ist schon vorgeschrieben, du kannst sie natürlich anpassen.</p>
+      <div class="ct-btns">
+        <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20gern%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+          Jetzt Termin sichern
+        </a>
+        <a class="btn btn--ghost" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20mich%20gern%20beraten%20lassen." target="_blank" rel="noopener">Jetzt beraten lassen</a>
+      </div>
+      <p class="ct-note">Termine nach Vereinbarung. Wenn ich gerade in einer Behandlung bin, antworte ich, sobald sie zu Ende ist.</p>
+
+      <ul class="ct-ways">
+        <li>
+          <span class="ct-label">Instagram</span>
+          <!-- TODO: Instagram-URL -->
+          <span class="ct-val"><a href="#">Nanu Aesthetics auf Instagram</a></span>
+        </li>
+        <li>
+          <span class="ct-label">E-Mail</span>
+          <!-- TODO: E-Mail-Adresse von Najra -->
+          <span class="ct-val">E-Mail-Adresse folgt</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SO LÄUFT DEINE ANFRAGE ================= -->
+<section class="section steps-section" aria-labelledby="flow-title">
+  <svg class="orn" style="top:10px;left:-60px;width:min(58vw,300px)" viewBox="0 0 300 480" fill="none" aria-hidden="true"><path d="M-30 430 C110 380 210 290 240 170 C258 100 244 30 190 -30" stroke="#A9906E" stroke-width="1.3" fill="none"/><circle cx="240" cy="170" r="4.5" fill="#C2A878"/></svg>
+  <div class="container">
+    <div class="reveal">
+      <h2 class="h2" id="flow-title">So läuft deine Anfrage</h2>
+      <p class="lead">Kein Buchungssystem, kein Warten in einer Schlange. Von der ersten Nachricht bis zum Termin bleibt es persönlich.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step__num" aria-hidden="true">1</span>
+        <div>
+          <h3>Nachricht schreiben</h3>
+          <p>Du schreibst mir, was du dir vorstellst. Auch wenn du noch unsicher bist, welche Behandlung passt, ist das genau der richtige Einstieg.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step__num" aria-hidden="true">2</span>
+        <div>
+          <h3>Persönliche Beratung</h3>
+          <p>Wir klären deine Fragen, auch die wichtigste: ob Permanent Make-up überhaupt zu dir und deiner Haut passt. Wenn nicht, sage ich dir das ehrlich.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step__num" aria-hidden="true">3</span>
+        <div>
+          <h3>Termin gemeinsam festlegen</h3>
+          <p>Wir finden einen Termin, der in deinen Alltag passt. Danach bekommst du die genaue Adresse und alles, was du vorher wissen musst.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WAS DU MIR SCHREIBEN KANNST ================= -->
+<section class="section" style="padding-top:0" aria-labelledby="tips-title">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="h2" id="tips-title">Was du mir am besten gleich schreibst</h2>
+      <p class="lead">Nichts davon ist Pflicht. Es spart uns aber Rückfragen und du hast schneller einen Termin.</p>
+      <ul class="tips">
+        <li>Welche Behandlung dich interessiert, oder dass du dir noch nicht sicher bist.</li>
+        <li>Ob du schon Permanent Make-up hast, das noch sichtbar ist.</li>
+        <li>Wann du grundsätzlich Zeit hast, zum Beispiel vormittags oder eher am Wochenende.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEIN STUDIO ================= -->
+<section class="about section" aria-labelledby="studio-title">
+  <div class="container">
+    <div class="teaser__grid">
+      <div class="imgwrap reveal"><span class="hl-frame"><span class="hl-v"></span></span>
+        <img src="bilder/remover-behandlung.jpeg" alt="Ruhiger Behandlungsmoment im Studio, Kundin liegt entspannt" loading="lazy">
+      </div>
+      <div class="reveal">
+        <h2 class="h2" id="studio-title">Mein Studio</h2>
+        <p class="lead">Ich arbeite in meinem Home-Studio in Köln-Nippes, zentral gelegen und gut mit Bus und Bahn erreichbar. Die genaue Adresse erhältst du nach bestätigter Terminvereinbarung.</p>
+        <p class="lead" style="margin-top:14px">Es ist ein ruhiger, privater Rahmen: keine Laufkundschaft, kein Zeitdruck, immer nur eine Kundin. Genau das brauchst du, wenn Form und Farbe wirklich stimmen sollen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section" id="termin" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="finalcta reveal">
+      <h2 id="cta-title">Lass uns über dein <em style="color:var(--accent-deep)">Wunschergebnis</em> sprechen.</h2>
+      <p>Schreib mir unverbindlich, ich melde mich persönlich bei dir.</p>
+      <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20gern%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+        Jetzt Termin sichern
+      </a>
+      <p class="finalcta__note">Noch offene Punkte? Die <a href="faq.html">häufigen Fragen</a> klären das Wichtigste vorab.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__logo">Nanu <span>Aesthetics</span></p>
+    <p class="footer__tag">Weil du es verdienst, dich schön zu fühlen – jeden Tag.</p>
+    <div class="footer__grid">
+      <div>
+        <h4>Menü</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="preise.html">Preise</a></li>
+          <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Behandlungen</h4>
+        <ul>
+          <li><a href="powder-brows.html">Powder Brows</a></li>
+          <li><a href="ombre-brows.html">Ombré Brows</a></li>
+          <li><a href="aquarell-lips.html">Aquarell Lips</a></li>
+          <li><a href="3d-lips.html">3D Lips</a></li>
+          <li><a href="liftings-remover.html">Liftings &amp; Remover</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://wa.me/491700000000" target="_blank" rel="noopener">WhatsApp schreiben</a></li>
+          <li><a href="kontakt.html">Kontaktseite</a></li>
+        </ul>
+        <p class="footer__note" style="margin-top:12px">Termine nach Vereinbarung.</p>
+        <h4 style="margin-top:18px">Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nanu Aesthetics</span>
+      <span>Permanent Make-up &amp; Beauty</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY CTA (mobile) ================= -->
+<div class="stickycta" id="stickycta">
+  <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20w%C3%BCrde%20gern%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">
+    <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+    Jetzt Termin sichern
+  </a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liftings &amp; Remover – Nanu Aesthetics</title>
+<meta name="description" content="Brow Lifting, Lash Lifting und Remover bei Nanu Aesthetics: Brauen und Wimpern in Form, oder alte Pigmentierungen professionell entfernen. Preise ab 55 €, Termin über WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .bullets{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:22px;max-width:60ch}
+  .bullets li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--espresso-soft)}
+  .bullets li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:9px}
+  .bullets li b{color:var(--espresso);font-weight:700}
+  .btnrow{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+  .combo{margin-top:34px;padding:24px 20px;border:1px solid var(--accent);border-radius:26px;background:var(--ivory-deep);box-shadow:var(--shadow-soft)}
+  .combo h3{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.2;margin-bottom:8px}
+  .combo p{font-size:.95rem;color:var(--espresso-soft);margin-bottom:16px;max-width:52ch}
+  .combo__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  .combo__price{font-weight:800;font-size:1.5rem}
+  .combo__price small{display:block;font-weight:500;font-size:.75rem;color:var(--muted)}
+  @media (min-width:860px){.combo{padding:32px 34px}}
+  .tiles--3{margin-top:26px}
+  @media (min-width:900px){.tiles--3{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Nanu <span>Aesthetics</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav__links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="leistungen.html" aria-current="page">Leistungen</a></li>
+        <li><a href="preise.html">Preise</a></li>
+        <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="mobilemenu" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobilemenu" id="mobilemenu" aria-label="Mobiles Menü">
+  <ul>
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="lr-title">
+  <svg class="orn" style="top:-30px;right:-70px;width:min(78vw,420px)" viewBox="0 0 420 620" fill="none" aria-hidden="true">
+    <path d="M370 -20 C300 160 180 260 150 400 C130 500 170 580 260 640" stroke="#A9906E" stroke-width="1.3" fill="none"/>
+    <path d="M410 60 C330 210 240 300 215 430" stroke="#C2A878" stroke-width="1.1" fill="none"/>
+    <circle cx="150" cy="400" r="4.5" fill="#C2A878"/>
+  </svg>
+  <div class="container">
+    <div class="hero__grid">
+      <div class="imgwrap hero__img reveal"><span class="hl-frame"><span class="hl-v"></span></span>
+        <img src="bilder/remover-behandlung.jpeg" alt="Ruhiger Behandlungsmoment im Studio, Kundin liegt entspannt" loading="eager">
+      </div>
+      <div class="hero__text">
+        <h1 id="lr-title">Liftings &amp; <em>Remover</em></h1>
+        <p class="hero__sub">Nicht jede Veränderung braucht Pigment. Manchmal reicht ein Lifting – und manchmal muss erst etwas weg.</p>
+        <div class="chips">
+          <span class="chip">Brow Lifting</span>
+          <span class="chip">Lash Lifting</span>
+          <span class="chip">Remover</span>
+        </div>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Liftings%20und%20Remover." target="_blank" rel="noopener">
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+            Jetzt Termin sichern
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIE DREI LEISTUNGEN ================= -->
+<section class="section" aria-labelledby="lr-svc">
+  <div class="container">
+    <div class="reveal">
+      <span class="kicker">Leistungen</span>
+      <h2 class="h2" id="lr-svc">Drei Wege, drei Ziele</h2>
+      <p class="lead">Zwei Behandlungen bringen deine eigenen Härchen in Form, eine räumt auf, was nicht mehr passt. Was für dich sinnvoll ist, klären wir vorher gemeinsam.</p>
+    </div>
+
+    <div class="services__list">
+      <!-- Brow Lifting -->
+      <article class="svc reveal">
+        <div class="svc__img"><img src="bilder/najra-3.jpeg" alt="Nahaufnahme von Augen und Brauen, Schwarzweiß" loading="lazy"></div>
+        <div class="svc__body">
+          <h3>Brow Lifting</h3>
+          <p>Deine Brauenhärchen werden in Form gelegt und fixiert. Dadurch wirken die Brauen voller, gleichmäßiger und gepflegter, ohne dass Farbe in die Haut kommt. Auf Wunsch färbe ich die Härchen zusätzlich, dann wirkt die Braue noch etwas dichter.</p>
+          <div class="chips">
+            <span class="chip">eigene Härchen</span>
+            <span class="chip">kein Pigment</span>
+            <span class="chip">hält mehrere Wochen</span>
+          </div>
+          <div class="svc__row">
+            <div class="svc__price">55 €<small>mit Färben 65 €</small></div>
+            <a class="svc__link" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Brow%20Lifting." target="_blank" rel="noopener">Termin anfragen</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lash Lifting -->
+      <article class="svc reveal">
+        <div class="svc__img"><img src="bilder/najra-2.jpeg" alt="Ruhiges Schwarzweiß-Porträt, Stimmungsbild aus dem Studio" loading="lazy"></div>
+        <div class="svc__body">
+          <h3>Lash Lifting</h3>
+          <p>Deine natürlichen Wimpern werden dauerhaft aufgerichtet. Der Blick wirkt offener und wacher, auch ohne Wimperntusche. Es werden keine Wimpern angeklebt, es sind deine eigenen. Mit Färben wirken sie zusätzlich dunkler und dichter.</p>
+          <div class="chips">
+            <span class="chip">eigene Wimpern</span>
+            <span class="chip">ohne Extensions</span>
+            <span class="chip">hält mehrere Wochen</span>
+          </div>
+          <div class="svc__row">
+            <div class="svc__price">55 €<small>mit Färben 65 €</small></div>
+            <a class="svc__link" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Lash%20Lifting." target="_blank" rel="noopener">Termin anfragen</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Remover -->
+      <article class="svc reveal">
+        <div class="svc__img"><img src="bilder/remover-behandlung.jpeg" alt="Behandlungsmoment im Studio während einer Remover-Sitzung" loading="lazy"></div>
+        <div class="svc__body">
+          <h3>Remover</h3>
+          <p>Professionelle Entfernung oder Aufhellung alter Pigmentierungen. Wenn eine alte Braue zu dunkel, zu kalt oder in der Form nicht mehr passend ist, arbeiten wir sie schrittweise heraus. Mehrere Sitzungen sind möglich und in vielen Fällen nötig.</p>
+          <div class="chips">
+            <span class="chip">Entfernung oder Aufhellung</span>
+            <span class="chip">mehrere Sitzungen möglich</span>
+          </div>
+          <div class="svc__row">
+            <div class="svc__price">120 €<small>je Sitzung</small></div>
+            <a class="svc__link" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20den%20Remover." target="_blank" rel="noopener">Termin anfragen</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="why" style="margin-top:30px">
+      <strong>Ehrlich zum Remover:</strong> Wie viele Sitzungen nötig sind, hängt von Farbe, Tiefe und Alter der alten Pigmentierung ab. Das lässt sich nicht pauschal sagen und wird vorher gemeinsam eingeschätzt. Ich sage dir offen, was realistisch möglich ist, bevor wir anfangen.
+    </div>
+
+    <!-- Kombi-Paket -->
+    <div class="combo reveal">
+      <h3>Kombi-Paket: Lash &amp; Brow Lifting mit Färben</h3>
+      <p>Wimpern und Brauen in einem Termin, beides inklusive Färben. Der gepflegte Gesamtblick, ohne dass Pigment ins Spiel kommt.</p>
+      <div class="combo__row">
+        <div class="combo__price">120 €<small>statt 130 € einzeln</small></div>
+        <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Kombi-Paket%20Lash%20%26%20Brow%20Lifting." target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+          Jetzt Termin sichern
+        </a>
+      </div>
+    </div>
+
+    <div class="btnrow reveal">
+      <a class="btn btn--ghost" href="preise.html">Alle Preise ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HALTBARKEIT ================= -->
+<section class="section trust" aria-labelledby="lr-hold">
+  <svg class="orn" style="top:-20px;left:-60px;width:min(66vw,350px)" viewBox="0 0 350 500" fill="none" aria-hidden="true"><path d="M-20 60 C90 110 170 190 196 300 C212 372 200 440 150 500" stroke="#A9906E" stroke-width="1.3" fill="none"/><circle cx="196" cy="300" r="4.5" fill="#C2A878"/></svg>
+  <div class="container">
+    <div class="reveal">
+      <span class="kicker">Gut zu wissen</span>
+      <h2 class="h2" id="lr-hold">Wie lange hält ein Lifting?</h2>
+      <p class="lead">In der Regel mehrere Wochen. Ein Lifting ist bewusst kein Dauerergebnis, und das ist auch der Vorteil: Es wächst einfach heraus, ohne dass etwas in der Haut bleibt.</p>
+      <ul class="bullets">
+        <li><b>Es wächst heraus.</b> Härchen und Wimpern erneuern sich. Nachwachsende Härchen kommen wieder in ihrer natürlichen Form, deshalb lässt der Effekt allmählich nach.</li>
+        <li><b>Individuell verschieden.</b> Wie lange es bei dir hält, hängt von deinem Haarwuchs und deiner Pflege ab. Feste Wochenzahlen versprechen ist unseriös.</li>
+        <li><b>Wiederholbar.</b> Sobald der Effekt nachlässt, kann das Lifting neu gemacht werden. Beim Termin sage ich dir, wann ein neuer Termin sinnvoll ist.</li>
+        <li><b>Kein Pigment im Spiel.</b> Beim Lifting kommt keine Farbe in die Haut. Wer ein dauerhaftes Ergebnis möchte, ist bei <a href="powder-brows.html" style="color:var(--accent-deep)">Powder Brows</a> oder <a href="ombre-brows.html" style="color:var(--accent-deep)">Ombré Brows</a> richtig.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section faq" aria-labelledby="lr-faq">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="h2" id="lr-faq">Häufige Fragen</h2>
+    </div>
+    <div class="faq__list reveal">
+      <div class="faq__item">
+        <button class="faq__q" id="lr-q1" aria-expanded="false" aria-controls="lr-a1">
+          <span>Wie viele Remover-Sitzungen brauche ich?</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="lr-a1" role="region" aria-labelledby="lr-q1">
+          <p>Das lässt sich vorab nicht pauschal sagen. Es hängt von Farbe, Tiefe und Alter der alten Pigmentierung ab. Wir schauen uns deine Situation vorher gemeinsam an und schätzen realistisch ein, was möglich ist. Jede Sitzung kostet 120 €, und zwischen den Sitzungen braucht die Haut Zeit zum Abheilen.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" id="lr-q2" aria-expanded="false" aria-controls="lr-a2">
+          <span>Werden beim Lifting fremde Härchen angeklebt?</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="lr-a2" role="region" aria-labelledby="lr-q2">
+          <p>Nein. Beim Lash Lifting werden deine eigenen Wimpern aufgerichtet, beim Brow Lifting deine eigenen Brauenhärchen in Form gelegt. Es kommen keine Extensions und kein Pigment dazu. Das Färben ist optional und kostet 10 € zusätzlich.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" id="lr-q3" aria-expanded="false" aria-controls="lr-a3">
+          <span>Kann ich Lash und Brow Lifting in einem Termin machen?</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="lr-a3" role="region" aria-labelledby="lr-q3">
+          <p>Ja, das ist sogar der häufigste Fall. Beides zusammen mit Färben gibt es als Kombi-Paket für 120 €. Schreib mir einfach, was du dir vorstellst, dann plane ich den Termin entsprechend ein.</p>
+        </div>
+      </div>
+    </div>
+    <div class="btnrow reveal">
+      <a class="btn btn--ghost" href="preise.html">Alle Preise ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ANDERE BEHANDLUNGEN ================= -->
+<section class="section" style="padding-top:0" aria-labelledby="lr-other">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="h2" id="lr-other">Andere Behandlungen</h2>
+    </div>
+    <div class="tiles tiles--3">
+      <a class="tile reveal" href="powder-brows.html">
+        <div class="tile__img"><img src="bilder/powder-brows.jpeg" alt="Abgeheilte Powder Brows, weicher Puderlook" loading="lazy"></div>
+        <div class="tile__body">
+          <h3>Powder Brows</h3>
+          <p>Der weiche Puderlook für definierte und trotzdem natürliche Brauen.</p>
+          <span class="tile__more">Mehr erfahren</span>
+        </div>
+      </a>
+      <a class="tile reveal" href="aquarell-lips.html">
+        <div class="tile__img"><img src="bilder/aquarell-lips.jpeg" alt="Aquarell Lips, zart pigmentierte Lippen" loading="lazy"></div>
+        <div class="tile__body">
+          <h3>Aquarell Lips</h3>
+          <p>Zarte, frische Lippenfarbe, die wirkt wie dein eigener Ton, nur schöner.</p>
+          <span class="tile__more">Mehr erfahren</span>
+        </div>
+      </a>
+      <a class="tile reveal" href="3d-lips.html">
+        <div class="tile__img"><img src="bilder/3d-lips.jpeg" alt="3D Lips mit definierter Kontur und Schattierung" loading="lazy"></div>
+        <div class="tile__body">
+          <h3>3D Lips</h3>
+          <p>Definierte Kontur und mehr Fülle im Ausdruck, ohne dass etwas aufgespritzt wird.</p>
+          <span class="tile__more">Mehr erfahren</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section" style="padding-top:0" aria-labelledby="lr-cta">
+  <div class="container">
+    <div class="finalcta reveal">
+      <h2 id="lr-cta">Erst mal <em style="color:var(--accent-deep)">unverbindlich fragen</em>?</h2>
+      <p>Schreib mir, was du vorhast. Ich sage dir ehrlich, ob ein Lifting reicht oder ob wir anders vorgehen sollten.</p>
+      <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Liftings%20und%20Remover." target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+        Jetzt Termin sichern
+      </a>
+      <p class="finalcta__note">Noch unsicher? <a href="faq.html">Häufige Fragen</a> beantworten die wichtigsten Punkte vorab.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__logo">Nanu <span>Aesthetics</span></p>
+    <p class="footer__tag">Weil du es verdienst, dich schön zu fühlen – jeden Tag.</p>
+    <div class="footer__grid">
+      <div>
+        <h4>Menü</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="preise.html">Preise</a></li>
+          <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Behandlungen</h4>
+        <ul>
+          <li><a href="powder-brows.html">Powder Brows</a></li>
+          <li><a href="ombre-brows.html">Ombré Brows</a></li>
+          <li><a href="aquarell-lips.html">Aquarell Lips</a></li>
+          <li><a href="3d-lips.html">3D Lips</a></li>
+          <li><a href="liftings-remover.html">Liftings &amp; Remover</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://wa.me/491700000000" target="_blank" rel="noopener">WhatsApp schreiben</a></li>
+          <li><a href="kontakt.html">Kontaktseite</a></li>
+        </ul>
+        <p class="footer__note" style="margin-top:12px">Termine nach Vereinbarung.</p>
+        <h4 style="margin-top:18px">Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nanu Aesthetics</span>
+      <span>Permanent Make-up &amp; Beauty</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY CTA (mobile) ================= -->
+<div class="stickycta" id="stickycta">
+  <a class="btn btn--primary" href="https://wa.me/491700000000?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Liftings%20und%20Remover." target="_blank" rel="noopener">
+    <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.6.2-.8l.4-.5c.1-.2.1-.3 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+    Jetzt Termin sichern
+  </a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

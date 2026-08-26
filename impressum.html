@@ -1,0 +1,195 @@
+<!-- TODO: Alle Platzhalter vor dem Go-Live ausfüllen -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – Nanu Aesthetics</title>
+<meta name="description" content="Impressum von Nanu Aesthetics, Studio für Permanent Make-up in Köln.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Ruhige Kopf-Sektion, da die Nav fixiert ist */
+  .pagehead{padding-top:112px;padding-bottom:0}
+  .pagehead h1{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(1.9rem,7vw,2.8rem);line-height:1.2;margin-bottom:12px;
+  }
+  .pagehead p{color:var(--espresso-soft);font-size:.95rem;max-width:60ch}
+  @media (min-width:860px){.pagehead{padding-top:150px}}
+  /* Textseite */
+  .legal{max-width:680px}
+  .legal h2{
+    font-size:1.12rem;font-weight:700;letter-spacing:-.005em;
+    margin:34px 0 8px;padding-top:20px;border-top:1px solid var(--line);
+  }
+  .legal h2:first-of-type{margin-top:8px}
+  .legal h3{font-size:1rem;font-weight:700;margin:20px 0 6px}
+  .legal p{font-size:.95rem;line-height:1.75;color:var(--espresso-soft);margin-bottom:12px}
+  .legal address{font-style:normal;font-size:.95rem;line-height:1.9;color:var(--espresso-soft)}
+  .legal ul{list-style:none;margin:6px 0 12px}
+  .legal li{
+    font-size:.95rem;line-height:1.75;color:var(--espresso-soft);
+    padding-left:16px;position:relative;
+  }
+  .legal li::before{
+    content:"";position:absolute;left:0;top:12px;
+    width:6px;height:6px;border-radius:50%;background:var(--accent);
+  }
+  .legal a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px}
+  .legal .ph{color:var(--espresso);font-weight:600}
+  .legal .hint{font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Nanu <span>Aesthetics</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav__links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="preise.html">Preise</a></li>
+        <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="mobilemenu" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobilemenu" id="mobilemenu" aria-label="Mobiles Menü">
+  <ul>
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+<!-- ================= KOPF ================= -->
+<section class="section pagehead">
+  <div class="container">
+    <h1>Impressum</h1>
+    <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG, vormals § 5 TMG).</p>
+  </div>
+</section>
+
+<!-- ================= INHALT ================= -->
+<section class="section">
+  <div class="container">
+    <div class="legal">
+
+      <h2>Anbieterin</h2>
+      <address>
+        <span class="ph">[Vollständiger Name der Inhaberin]</span><br>
+        Nanu Aesthetics<br>
+        <span class="ph">[Straße Hausnummer]</span><br>
+        <span class="ph">[PLZ]</span> Köln<br>
+        Deutschland
+      </address>
+
+      <h2>Kontakt</h2>
+      <ul>
+        <li>E-Mail: <span class="ph">[E-Mail]</span></li>
+        <li>Telefon: <span class="ph">[Telefon]</span></li>
+      </ul>
+      <p class="hint">Terminanfragen laufen in der Regel über WhatsApp, siehe <a href="kontakt.html">Kontaktseite</a>.</p>
+
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p><span class="ph">[Vollständiger Name der Inhaberin]</span>, Adresse wie oben.</p>
+
+      <h2>Umsatzsteuer</h2>
+      <p>Als Kleinunternehmerin im Sinne von § 19 Umsatzsteuergesetz (UStG) wird keine Umsatzsteuer berechnet und daher auch nicht in Rechnungen ausgewiesen.</p>
+      <p class="hint">Falls zutreffend. Sollte die Kleinunternehmerregelung nicht oder nicht mehr gelten, ist dieser Abschnitt zu entfernen und stattdessen die Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG anzugeben: <span class="ph">[USt-IdNr.]</span></p>
+
+      <h2>Berufsbezeichnung</h2>
+      <p><span class="ph">[Berufsbezeichnung, zum Beispiel Kosmetikerin oder PMU-Artistin]</span>, tätig im Bereich Permanent Make-up und Wimpern- sowie Augenbrauenbehandlungen.</p>
+
+      <h2>Streitschlichtung</h2>
+      <p>Ich bin nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p class="hint">Diese Angabe vor dem Go-Live bestätigen oder anpassen.</p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>Die Inhalte dieser Seiten wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Die dargestellten Informationen zu Behandlungen ersetzen keine persönliche Beratung und keine medizinische Auskunft.</p>
+
+      <h2>Haftung für Links</h2>
+      <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für diese fremden Inhalte ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Bei Bekanntwerden von Rechtsverstößen werden entsprechende Links entfernt.</p>
+
+      <h2>Urheberrecht</h2>
+      <p>Die Inhalte und Werke auf diesen Seiten, insbesondere die Bilder der Behandlungsergebnisse, unterliegen dem deutschen Urheberrecht. Eine Vervielfältigung oder Verwendung außerhalb der gesetzlich erlaubten Fälle bedarf der vorherigen schriftlichen Zustimmung.</p>
+
+      <h2>Datenschutz</h2>
+      <p>Informationen zum Umgang mit personenbezogenen Daten finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__logo">Nanu <span>Aesthetics</span></p>
+    <p class="footer__tag">Weil du es verdienst, dich schön zu fühlen – jeden Tag.</p>
+    <div class="footer__grid">
+      <div>
+        <h4>Menü</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="preise.html">Preise</a></li>
+          <li><a href="meine-arbeit.html">Meine Arbeit</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Behandlungen</h4>
+        <ul>
+          <li><a href="powder-brows.html">Powder Brows</a></li>
+          <li><a href="ombre-brows.html">Ombré Brows</a></li>
+          <li><a href="aquarell-lips.html">Aquarell Lips</a></li>
+          <li><a href="3d-lips.html">3D Lips</a></li>
+          <li><a href="liftings-remover.html">Liftings &amp; Remover</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://wa.me/491700000000" target="_blank" rel="noopener">WhatsApp schreiben</a></li>
+          <li><a href="kontakt.html">Kontaktseite</a></li>
+        </ul>
+        <p class="footer__note" style="margin-top:12px">Termine nach Vereinbarung.</p>
+        <h4 style="margin-top:18px">Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nanu Aesthetics</span>
+      <span>Permanent Make-up &amp; Beauty</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
