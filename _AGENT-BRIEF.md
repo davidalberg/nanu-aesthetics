@@ -16,15 +16,13 @@ professionell-warm, keine Superlativ-Floskeln, keine Emojis, kein Em-Dash (—),
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEITENTITEL – Nanu Aesthetics</title>
   <meta name="description" content="...">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
   </head>
   <body>
   ```
-  (exakte Font-URL aus `index.html` übernehmen, falls sie dort abweicht)
+  (Fonts sind seit 2026-08-27 lokal gehostet in `fonts/` — Council-Konsens fceb3e24d2e8e8ac, DSGVO)
 - **Nav und Mobile-Menü:** Inhalt von `_nav.html` 1:1 übernehmen. Dort stehen Platzhalter
   `{A_HOME} {A_LEIST} {A_PREIS} {A_ARBEIT} {A_UEBER} {A_FAQ} {A_KONTAKT}` — bei der eigenen
   Seite ` aria-current="page"` einsetzen, alle anderen Platzhalter **leer löschen**.
