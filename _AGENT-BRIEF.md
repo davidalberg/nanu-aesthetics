@@ -88,7 +88,7 @@ Es gibt kein eigenes Ombré-Brows-Foto — dort `powder-brows-frisch.jpeg` mit n
 
 ## Kontakt
 
-WhatsApp-Platzhalter: `https://wa.me/491700000000` — mit vorformulierter Nachricht arbeiten, z. B.
+WhatsApp-Nummer (echt, seit 2026-08-27): `https://wa.me/491772475542` — mit vorformulierter Nachricht arbeiten, z. B.
 `?text=Hallo%20Najra%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Powder%20Brows.`
 Adresse: nur „Home-Studio in Köln-Nippes, zentral gelegen und gut mit Bus und Bahn erreichbar.
 Die genaue Adresse erhältst du nach bestätigter Terminvereinbarung." Keine Straße erfinden.
