@@ -24,7 +24,7 @@ professionell-warm, keine Superlativ-Floskeln, keine Emojis, kein Em-Dash (—),
   ```
   (Fonts sind seit 2026-08-27 lokal gehostet in `fonts/` — Council-Konsens fceb3e24d2e8e8ac, DSGVO)
 - **Nav und Mobile-Menü:** Inhalt von `_nav.html` 1:1 übernehmen. Dort stehen Platzhalter
-  `{A_HOME} {A_LEIST} {A_PREIS} {A_ARBEIT} {A_UEBER} {A_FAQ} {A_KONTAKT}` — bei der eigenen
+  `{A_HOME} {A_LEIST} {A_PREIS} {A_ARBEIT} {A_UEBER} {A_FAQ} {A_RATGEBER} {A_KONTAKT}` — bei der eigenen
   Seite ` aria-current="page"` einsetzen, alle anderen Platzhalter **leer löschen**.
   Detailseiten (Powder Brows usw.) markieren `{A_LEIST}`.
 - **Footer:** Inhalt von `_footer.html` 1:1 übernehmen (unverändert).
@@ -112,8 +112,9 @@ Sonne. Dauer je PMU-Behandlung ca. 2 bis 3 Stunden.
   ausdrucksstärker als Powder Brows, bleibt aber weich.
 - **Aquarell Lips:** zarte, transparente Lippenpigmentierung; frischer, gesunder Farbton,
   wirkt wie ein Hauch Farbe.
-- **3D Lips:** definierte Kontur plus Schattierung, dadurch wirken die Lippen voller;
-  ohne Filler, ohne Aufspritzen.
+- **3D Lips:** definierte Kontur plus Schattierung, dadurch wirken die Lippen optisch voller.
+  NICHT mit Filler/Aufspritzen vergleichen oder abgrenzen (Werberecht, Council 85de4f90b0d0600e;
+  seit 2026-10-06 überall entfernt).
 - **Abheilung:** erste Tage intensiver und dunkler, dann heller werdend; nach ca. 4 Wochen
   abgeheilt; das Endergebnis ist weicher und natürlicher als direkt nach der Behandlung.
 - **Vorbereitung:** am Behandlungstag kein Alkohol und wenig Koffein, blutverdünnende Mittel
@@ -170,8 +171,11 @@ gesamten Behandlung besonders wichtig."
 
 `index.html` (Startseite, fertig) · `leistungen.html` · `powder-brows.html` · `ombre-brows.html` ·
 `aquarell-lips.html` · `3d-lips.html` · `liftings-remover.html` · `preise.html` ·
-`meine-arbeit.html` · `ueber-mich.html` · `faq.html` · `kontakt.html` · `impressum.html` ·
-`datenschutz.html`
+`meine-arbeit.html` · `ueber-mich.html` · `faq.html` · `ratgeber.html` (Blog-Übersicht) ·
+`permanent-make-up-koeln-guide.html` (Artikel) · `kontakt.html` · `impressum.html` · `datenschutz.html`
+
+Neue Ratgeber-Artikel: Hülle wie `permanent-make-up-koeln-guide.html` (Klassen `.art__*`,
+BlogPosting-JSON-LD), Karte in `ratgeber.html` ergänzen, URL in `sitemap.xml` eintragen.
 
 Jede Unterseite endet mit einem Abschluss-CTA (`.finalcta`) und verlinkt sinnvoll weiter
 (z. B. Detailseite → Preise, Meine Arbeit, andere Behandlungen).
