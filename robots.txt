@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nanu-aesthetics.vercel.app/sitemap.xml
+Sitemap: https://nanu-aesthetics.de/sitemap.xml
