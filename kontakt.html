@@ -58,6 +58,27 @@
   @media (min-width:860px){
     .ct-btns{flex-direction:row}
   }
+  /* Kontaktformular (wird per JS eingeblendet, sobald /api/kontakt bereit ist) */
+  .kform{max-width:560px;margin-top:22px;display:grid;gap:16px}
+  .kform__row{display:grid;gap:16px}
+  .kform label{display:block;font-size:.85rem;font-weight:600;color:var(--espresso);margin-bottom:6px}
+  .kform .opt{font-weight:400;color:var(--muted)}
+  .kform input,.kform select,.kform textarea{
+    width:100%;font:inherit;font-size:1rem;color:var(--espresso);
+    background:var(--ivory-deep);border:1px solid var(--line);border-radius:12px;padding:12px 14px;
+  }
+  .kform textarea{min-height:140px;resize:vertical}
+  .kform input:focus,.kform select:focus,.kform textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+  .kform__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .kform .kform__check{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;font-weight:400;color:var(--espresso-soft);margin:0;cursor:pointer}
+  .kform__check input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:var(--accent)}
+  .kform__check a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px}
+  .kform__hint{font-size:.82rem;color:var(--muted)}
+  .kform__status{font-size:.93rem;min-height:1.4em}
+  .kform__status.is-error{color:#E8A08A}
+  .kform__status.is-ok{color:var(--accent-deep)}
+  .kform button[disabled]{opacity:.6;cursor:wait}
+  @media (min-width:640px){.kform__row{grid-template-columns:1fr 1fr}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","@id":"https://nanu-aesthetics.de/#business","name":"Nanu Aesthetics","description":"Permanent Make-up Studio in Köln-Nippes: Powder Brows, Ombré Brows, Aquarell Lips, 3D Lips, Brow Lifting, Lash Lifting und Remover.","url":"https://nanu-aesthetics.de/","image":"https://nanu-aesthetics.de/bilder/og-image.jpg","telephone":"+491772475542","email":"nanuaestheticss@gmail.com","priceRange":"€€","address":{"@type":"PostalAddress","addressLocality":"Köln","postalCode":"50733","addressRegion":"Nordrhein-Westfalen","addressCountry":"DE"},"areaServed":[{"@type":"City","name":"Köln"}],"sameAs":["https://www.instagram.com/nanu_aesthetics_/"]}</script>
 </head>
@@ -146,6 +167,64 @@
           <span class="ct-val"><a href="mailto:nanuaestheticss@gmail.com">nanuaestheticss@gmail.com</a></span>
         </li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKTFORMULAR ================= -->
+<!-- Bleibt versteckt, bis /api/kontakt {"ready":true} meldet (RESEND_API_KEY gesetzt). -->
+<section class="section" id="formular" style="padding-bottom:0" aria-labelledby="form-title" hidden>
+  <div class="container">
+    <div class="ct-card">
+      <h3 id="form-title">Lieber per Formular?</h3>
+      <p>Schreib mir hier, ich melde mich per E-Mail oder Telefon bei dir.</p>
+      <form class="kform" id="kform" novalidate>
+        <div>
+          <label for="kf-name">Name</label>
+          <input id="kf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+        </div>
+        <div class="kform__row">
+          <div>
+            <label for="kf-email">E-Mail <span class="opt">(oder Telefon)</span></label>
+            <input id="kf-email" name="email" type="email" autocomplete="email" maxlength="254">
+          </div>
+          <div>
+            <label for="kf-tel">Telefon <span class="opt">(oder E-Mail)</span></label>
+            <input id="kf-tel" name="telefon" type="tel" autocomplete="tel" maxlength="30">
+          </div>
+        </div>
+        <div>
+          <label for="kf-beh">Behandlung <span class="opt">(optional)</span></label>
+          <select id="kf-beh" name="behandlung">
+            <option value="">Bitte wählen</option>
+            <option>Powder Brows</option>
+            <option>Ombré Brows</option>
+            <option>Aquarell Lips</option>
+            <option>3D Lips</option>
+            <option>Brow Lifting</option>
+            <option>Lash Lifting</option>
+            <option>PMU-Remover</option>
+            <option>Noch unsicher, ich möchte mich beraten lassen</option>
+          </select>
+        </div>
+        <div>
+          <label for="kf-msg">Nachricht</label>
+          <textarea id="kf-msg" name="nachricht" maxlength="2000" required></textarea>
+          <p class="kform__hint">Bitte schreib hier noch keine Gesundheitsangaben hinein, die besprechen wir persönlich vor der Behandlung.</p>
+        </div>
+        <div class="kform__hp" aria-hidden="true">
+          <label for="kf-web">Website</label>
+          <input id="kf-web" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <label class="kform__check">
+          <input type="checkbox" name="einwilligung" required>
+          <span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Mehr dazu in der <a href="datenschutz.html#kontaktformular">Datenschutzerklärung</a>.</span>
+        </label>
+        <div>
+          <button class="btn btn--primary" type="submit">Nachricht senden</button>
+        </div>
+        <p class="kform__status" id="kf-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -293,5 +372,57 @@
 </div>
 
 <script src="js/main.js" defer></script>
+<script>
+(function () {
+  var sec = document.getElementById('formular');
+  var form = document.getElementById('kform');
+  var status = document.getElementById('kf-status');
+  if (!sec || !form || !window.fetch) return;
+
+  fetch('/api/kontakt', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) { if (d && d.ready) sec.hidden = false; })
+    .catch(function () {});
+
+  function show(msg, ok) {
+    status.textContent = msg;
+    status.className = 'kform__status ' + (ok ? 'is-ok' : 'is-error');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    var data = {
+      name: f.name.value.trim(),
+      email: f.email.value.trim(),
+      telefon: f.telefon.value.trim(),
+      behandlung: f.behandlung.value,
+      nachricht: f.nachricht.value.trim(),
+      einwilligung: f.einwilligung.checked,
+      website: f.website.value
+    };
+    if (!data.name || !data.nachricht) { show('Bitte gib deinen Namen und eine Nachricht an.'); return; }
+    if (!data.email && !data.telefon) { show('Bitte gib eine E-Mail-Adresse oder Telefonnummer an, damit ich dir antworten kann.'); return; }
+    if (data.email && !f.email.checkValidity()) { show('Die E-Mail-Adresse sieht nicht richtig aus.'); return; }
+    if (!data.einwilligung) { show('Bitte bestätige die Datenschutzhinweise.'); return; }
+
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true;
+    show('Wird gesendet …', true);
+    fetch('/api/kontakt', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (res.ok && res.j.success) {
+          form.reset();
+          show('Danke, deine Nachricht ist angekommen. Ich melde mich persönlich bei dir.', true);
+        } else {
+          show(res.j.error || 'Das hat leider nicht geklappt. Schreib mir bitte per WhatsApp oder E-Mail.');
+        }
+      })
+      .catch(function () { show('Das hat leider nicht geklappt. Schreib mir bitte per WhatsApp oder E-Mail.'); })
+      .then(function () { btn.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>
