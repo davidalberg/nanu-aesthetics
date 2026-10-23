@@ -117,13 +117,13 @@
   <div class="container">
     <div class="art__body">
       <p class="story__lead">Die meisten Fragen bekomme ich nicht vor dem Termin, sondern danach. Meistens zwischen Tag 10 und Tag 14, mit dem Satz: „Ist die Farbe jetzt weg?“</p>
-      <p>Nein, ist sie nicht. Pigmentierte Brauen durchlaufen eine Abheilung in mehreren Phasen, und jede sieht anders aus. Wenn du vorher weißt, was kommt, bleibst du entspannt. Scroll einfach durch, die Braue rechts zeigt dir, was in der jeweiligen Phase passiert.</p>
+      <p>Nein, ist sie nicht. Pigmentierte Brauen durchlaufen eine Abheilung in mehreren Phasen, und jede sieht anders aus. Wenn du vorher weißt, was kommt, bleibst du entspannt. Klick dich durch die Phasen, die Grafik zeigt dir, was mit der Braue jeweils passiert.</p>
     </div>
 
-    <div class="scrolly">
-      <div class="scrolly__sticky">
-        <div class="scrolly__visual v-brow" role="img" aria-label="Schematische Braue, die sich in den Phasen der Abheilung verändert">
-          <span class="scrolly__label">Tag 0</span>
+    <div class="stepper">
+      <div class="stepper__stage">
+        <div class="stepper__visual v-brow" role="img" aria-label="Schematische Braue, die sich in den Phasen der Abheilung verändert">
+          <span class="stepper__label">Tag 0</span>
           <svg viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
             <defs>
               <radialGradient id="ab-skin" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#E9C7AC"/><stop offset="1" stop-color="#B98C70"/></radialGradient>
@@ -156,50 +156,50 @@
         </div>
       </div>
 
-      <div class="scrolly__steps">
-        <section class="sstep" data-label="Tag 0" data-vars="--fresh:1;--heal:0;--red:.55;--flake:0;--t:0">
-          <div class="sstep__card">
-            <span class="sstep__tag">Direkt nach dem Termin</span>
+      <div class="stepper__panels">
+        <section class="stepper__panel" data-label="Tag 0" data-vars="--fresh:1;--heal:0;--red:.55;--flake:0;--t:0">
+          <div class="stepper__card">
+            <span class="stepper__tag">Direkt nach dem Termin</span>
             <h2 id="tag-0">Tag 0: kräftig, scharf, leicht gerötet</h2>
             <p>Wenn du aus dem Studio gehst, sind deine Brauen <b>deutlich dunkler und kantiger</b> als das spätere Ergebnis. Die Haut um die Braue ist leicht gerötet und etwas geschwollen.</p>
             <p>Das ist gewollt: Ein Teil des Pigments geht in der Abheilung wieder verloren. Was du jetzt siehst, ist nicht das Endergebnis.</p>
           </div>
         </section>
-        <section class="sstep" data-label="Tag 1 bis 3" data-vars="--fresh:1;--heal:0;--red:.22;--flake:0;--t:.06">
-          <div class="sstep__card">
-            <span class="sstep__tag">Die dunkelste Phase</span>
+        <section class="stepper__panel" data-label="Tag 1 bis 3" data-vars="--fresh:1;--heal:0;--red:.22;--flake:0;--t:.06">
+          <div class="stepper__card">
+            <span class="stepper__tag">Die dunkelste Phase</span>
             <h2 id="tag-1-3">Tag 1 bis 3: noch dunkler als erwartet</h2>
             <p>In den ersten Tagen wirkt die Farbe oft sogar noch intensiver. Die Haut bildet eine feine Schutzschicht über dem Pigment, und die liegt wie ein dunkler Film auf der Braue.</p>
             <p>Die Rötung lässt nach, manchmal spannt es ein wenig. Halte dich in dieser Zeit genau an die Pflegehinweise, die du von mir mitbekommst, und fass die Brauen so wenig wie möglich an.</p>
           </div>
         </section>
-        <section class="sstep" data-label="Tag 4 bis 10" data-vars="--fresh:.7;--heal:0;--red:.05;--flake:1;--t:.2">
-          <div class="sstep__card">
-            <span class="sstep__tag">Schuppen und Jucken</span>
+        <section class="stepper__panel" data-label="Tag 4 bis 10" data-vars="--fresh:.7;--heal:0;--red:.05;--flake:1;--t:.2">
+          <div class="stepper__card">
+            <span class="stepper__tag">Schuppen und Jucken</span>
             <h2 id="tag-4-10">Tag 4 bis 10: die Haut schuppt sich</h2>
             <p>Jetzt löst sich die oberste Hautschicht in feinen Schüppchen. Das kann jucken. <b>Bitte nicht kratzen, reiben oder abzupfen</b>, denn mit einer zu früh gelösten Schuppe geht auch Pigment verloren und es entstehen hellere Stellen.</p>
             <p>Die Braue sieht in dieser Phase ungleichmäßig aus, an manchen Stellen dunkler, an anderen schon heller. Lass sie einfach in Ruhe.</p>
           </div>
         </section>
-        <section class="sstep" data-label="Tag 10 bis 21" data-vars="--fresh:0;--heal:.22;--red:0;--flake:0;--t:.42">
-          <div class="sstep__card">
-            <span class="sstep__tag">Die Geister-Phase</span>
+        <section class="stepper__panel" data-label="Tag 10 bis 21" data-vars="--fresh:0;--heal:.22;--red:0;--flake:0;--t:.42">
+          <div class="stepper__card">
+            <span class="stepper__tag">Die Geister-Phase</span>
             <h2 id="ghosting">Tag 10 bis 21: „Ist die Farbe weg?“</h2>
             <p>Die Schuppen sind ab, und plötzlich wirken die Brauen <b>blass, fast verschwunden oder fleckig</b>. Viele nennen das „Ghosting“. Hier kommen die meisten besorgten Nachrichten.</p>
             <p>Der Grund: Über dem Pigment hat sich frische, noch milchig wirkende Haut gebildet. Das Pigment ist darunter, es ist nur noch nicht klar zu sehen. Jetzt hilft nur Geduld.</p>
           </div>
         </section>
-        <section class="sstep" data-label="Woche 3 bis 4" data-vars="--fresh:0;--heal:.8;--red:0;--flake:0;--t:.66">
-          <div class="sstep__card">
-            <span class="sstep__tag">Die Farbe kommt zurück</span>
+        <section class="stepper__panel" data-label="Woche 3 bis 4" data-vars="--fresh:0;--heal:.8;--red:0;--flake:0;--t:.66">
+          <div class="stepper__card">
+            <span class="stepper__tag">Die Farbe kommt zurück</span>
             <h2 id="woche-3-4">Woche 3 bis 4: das echte Ergebnis zeigt sich</h2>
             <p>Die neue Haut wird klarer, und die Farbe „blüht“ wieder auf. Jetzt siehst du zum ersten Mal, wie deine Powder Brows wirklich aussehen: weicher als am ersten Tag, mit einem sanften Übergang von vorne nach hinten.</p>
             <p>Kleine Lücken oder etwas hellere Stellen sind in diesem Moment normal. Genau dafür gibt es die Nachbehandlung.</p>
           </div>
         </section>
-        <section class="sstep" data-label="Woche 4 bis 6" data-vars="--fresh:0;--heal:1;--red:0;--flake:0;--t:1">
-          <div class="sstep__card">
-            <span class="sstep__tag">Der Feinschliff</span>
+        <section class="stepper__panel" data-label="Woche 4 bis 6" data-vars="--fresh:0;--heal:1;--red:0;--flake:0;--t:1">
+          <div class="stepper__card">
+            <span class="stepper__tag">Der Feinschliff</span>
             <h2 id="nachbehandlung">Woche 4 bis 6: die Nachbehandlung</h2>
             <p>Nach vier bis sechs Wochen schauen wir uns das abgeheilte Ergebnis gemeinsam an. Wir verdichten die Farbe dort, wo die Haut mehr Pigment abgegeben hat, und gleichen Feinheiten in der Form aus.</p>
             <p>Danach beginnt eine zweite, meist kürzere und mildere Abheilung. Erst nach dieser Runde ist deine Braue wirklich fertig. Die Nachbehandlung kostet bei mir 50&nbsp;€, alle Preise stehen auf der <a href="preise.html">Preisseite</a>.</p>
