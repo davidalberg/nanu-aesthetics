@@ -22,6 +22,8 @@ const BEHANDLUNGEN = [
   'Noch unsicher, ich möchte mich beraten lassen',
 ];
 
+const QUELLEN = ['Google-Suche', 'Google Maps', 'Instagram', 'Empfehlung', 'Treatwell', 'Sonstiges'];
+
 // In-Memory-Rate-Limit pro Serverless-Instanz (5 Anfragen pro Stunde und IP)
 const RATE_MAX = 5;
 const RATE_WINDOW = 60 * 60 * 1000;
@@ -115,6 +117,8 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Die Telefonnummer sieht nicht richtig aus.' });
   }
   const behandlungOk = BEHANDLUNGEN.includes(behandlung) ? behandlung : 'Nicht angegeben';
+  const quelle = str(data.quelle);
+  const quelleOk = QUELLEN.includes(quelle) ? quelle : 'Nicht angegeben';
 
   if (!apiKey) {
     console.error(JSON.stringify({ route: '/api/kontakt', event: 'resend_not_configured', ts: new Date().toISOString() }));
@@ -129,7 +133,8 @@ module.exports = async function handler(req, res) {
         ${row('E-Mail', email ? `<a href="mailto:${encodeURIComponent(email)}">${esc(email)}</a>` : 'Nicht angegeben', false)}
         ${row('Telefon', telefon ? `<a href="tel:${encodeURIComponent(telefon)}">${esc(telefon)}</a>` : 'Nicht angegeben', true)}
         ${row('Behandlung', esc(behandlungOk), false)}
-        ${row('Nachricht', esc(nachricht), true)}
+        ${row('Gefunden über', esc(quelleOk), true)}
+        ${row('Nachricht', esc(nachricht), false)}
       </table>
       <p style="margin-top:20px;color:#6b5a4a;font-size:13px;">
         ${email ? 'Du kannst direkt auf diese E-Mail antworten, die Antwort geht an die Absenderin der Anfrage.' : 'Keine E-Mail-Adresse angegeben, bitte telefonisch oder per WhatsApp antworten.'}
@@ -167,3 +172,4 @@ module.exports = async function handler(req, res) {
 };
 
 module.exports.BEHANDLUNGEN = BEHANDLUNGEN;
+module.exports.QUELLEN = QUELLEN;

@@ -208,6 +208,18 @@
           </select>
         </div>
         <div>
+          <label for="kf-quelle">Wie hast du mich gefunden? <span class="opt">(optional)</span></label>
+          <select id="kf-quelle" name="quelle">
+            <option value="">Bitte wählen</option>
+            <option>Google-Suche</option>
+            <option>Google Maps</option>
+            <option>Instagram</option>
+            <option>Empfehlung</option>
+            <option>Treatwell</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div>
           <label for="kf-msg">Nachricht</label>
           <textarea id="kf-msg" name="nachricht" maxlength="2000" required></textarea>
           <p class="kform__hint">Bitte schreib hier noch keine Gesundheitsangaben hinein, die besprechen wir persönlich vor der Behandlung.</p>
@@ -397,6 +409,7 @@
       email: f.email.value.trim(),
       telefon: f.telefon.value.trim(),
       behandlung: f.behandlung.value,
+      quelle: f.quelle.value,
       nachricht: f.nachricht.value.trim(),
       einwilligung: f.einwilligung.checked,
       website: f.website.value
