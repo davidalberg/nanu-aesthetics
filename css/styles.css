@@ -108,6 +108,7 @@ button{font-family:inherit}
   text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px;
 }
 .h2{
+  text-wrap:balance;
   font-size:clamp(1.6rem,5.5vw,2.3rem);font-weight:700;letter-spacing:-.01em;
   line-height:1.2;margin-bottom:14px;
 }
@@ -155,6 +156,7 @@ button{font-family:inherit}
   position:absolute;pointer-events:none;z-index:0;
   opacity:.4;
 }
+@media (max-width:859px){.orn{opacity:.2}}
 section{position:relative;overflow:hidden}
 section .container{position:relative;z-index:1}
 
@@ -353,7 +355,8 @@ section .container{position:relative;z-index:1}
 @media (min-width:860px){
   .services__list{gap:44px}
   .svc{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
-  .svc__img{aspect-ratio:auto;min-height:380px}
+  .svc__img{aspect-ratio:auto;min-height:420px;position:relative}
+  .svc__img img{position:absolute;inset:0}
   .svc:nth-child(even) .svc__img{order:2}
   .svc__body{padding:38px 40px;display:flex;flex-direction:column;justify-content:center}
 }
@@ -450,7 +453,7 @@ section .container{position:relative;z-index:1}
   border-radius:var(--radius);
   padding:36px 22px;text-align:center;
 }
-.rtrack{position:relative;min-height:300px}
+.rtrack{position:relative;min-height:220px}
 .review{
   position:absolute;inset:0;margin:0;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
@@ -525,6 +528,7 @@ section .container{position:relative;z-index:1}
   border-radius:26px;padding:44px 24px;text-align:center;
 }
 .finalcta h2{
+  text-wrap:balance;
   font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,6vw,2.4rem);
   line-height:1.2;margin-bottom:10px;
 }
@@ -581,6 +585,7 @@ section .container{position:relative;z-index:1}
 }
 .tile--wide{grid-column:1/-1}
 .tile--wide .tile__img{aspect-ratio:16/9}
+@media (min-width:700px){.tile--wide .tile__img{aspect-ratio:21/9}}
 
 /* ================= VERTRAUENS-BLOCK ================= */
 .trust{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}

@@ -36,6 +36,10 @@
   .prow--sub + .prow{border-top-color:rgba(215,200,183,.14)}
   .pgroup{margin-top:40px}
   .pgroup:first-child{margin-top:22px}
+  @media (min-width:960px){
+    .pricing__list{max-width:none;display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
+    .pgroup:nth-child(2){margin-top:22px}
+  }
   .pgroup__note{font-size:.86rem;line-height:1.6;color:var(--muted);
     margin:0 0 6px;max-width:46ch}
   .prow__name{letter-spacing:-.005em}
@@ -132,51 +136,51 @@
         <div class="prow">
           <span class="prow__name">Powder Brows</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">300 €</span>
+          <span class="prow__price">300&nbsp;€</span>
         </div>
         <div class="prow prow--sub">
           <span class="prow__name">Nachbehandlung Powder Brows</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">50 €</span>
+          <span class="prow__price">50&nbsp;€</span>
         </div>
 
         <div class="prow">
           <span class="prow__name">Ombré Brows</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">300 €</span>
+          <span class="prow__price">300&nbsp;€</span>
         </div>
         <div class="prow prow--sub">
           <span class="prow__name">Nachbehandlung Ombré Brows</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">50 €</span>
+          <span class="prow__price">50&nbsp;€</span>
         </div>
       </div>
 
       <!-- PMU LIPS -->
       <div class="pgroup reveal">
         <h3>PMU Lips</h3>
-        <p class="pgroup__note">Auch die Lippenbehandlungen dauern ca. 2 bis 3 Stunden und halten 1 bis 3 Jahre.</p>
+        <p class="pgroup__note">Beide Techniken dauern ca. 2 bis 3 Stunden und halten 1 bis 3 Jahre.</p>
 
         <div class="prow">
           <span class="prow__name">Aquarell Lips</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">300 €</span>
+          <span class="prow__price">300&nbsp;€</span>
         </div>
         <div class="prow prow--sub">
           <span class="prow__name">Nachbehandlung Aquarell Lips</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">50 €</span>
+          <span class="prow__price">50&nbsp;€</span>
         </div>
 
         <div class="prow">
           <span class="prow__name">3D Lips</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">300 €</span>
+          <span class="prow__price">300&nbsp;€</span>
         </div>
         <div class="prow prow--sub">
           <span class="prow__name">Nachbehandlung 3D Lips</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">50 €</span>
+          <span class="prow__price">50&nbsp;€</span>
         </div>
       </div>
 
@@ -188,7 +192,7 @@
         <div class="prow">
           <span class="prow__name">Remover, pro Sitzung</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">120 €</span>
+          <span class="prow__price">120&nbsp;€</span>
         </div>
       </div>
 
@@ -200,27 +204,27 @@
         <div class="prow">
           <span class="prow__name">Lash Lifting, ohne Färben</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">55 €</span>
+          <span class="prow__price">55&nbsp;€</span>
         </div>
         <div class="prow">
           <span class="prow__name">Lash Lifting, mit Färben</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">65 €</span>
+          <span class="prow__price">65&nbsp;€</span>
         </div>
         <div class="prow">
           <span class="prow__name">Brow Lifting, ohne Färben</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">55 €</span>
+          <span class="prow__price">55&nbsp;€</span>
         </div>
         <div class="prow">
           <span class="prow__name">Brow Lifting, mit Färben</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">65 €</span>
+          <span class="prow__price">65&nbsp;€</span>
         </div>
         <div class="prow">
           <span class="prow__name">Kombi-Paket Lash &amp; Brow Lifting, mit Färben</span>
           <span class="prow__dots" aria-hidden="true"></span>
-          <span class="prow__price">120 €</span>
+          <span class="prow__price">120&nbsp;€</span>
         </div>
       </div>
 
@@ -285,7 +289,7 @@
 </section>
 
 <!-- ================= FINAL CTA ================= -->
-<section class="section" id="kontakt" style="padding-top:0" aria-labelledby="cta-title">
+<section class="section" id="kontakt" aria-labelledby="cta-title">
   <div class="container">
     <div class="finalcta reveal">
       <h2 id="cta-title">Deinen Termin <em style="color:var(--accent-deep)">in Ruhe</em> abstimmen</h2>
@@ -339,7 +343,7 @@
           <li><a href="https://www.instagram.com/nanu_aesthetics_/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="kontakt.html">Kontaktseite</a></li>
         </ul>
-        <p class="footer__note" style="margin-top:12px">Termine nach Vereinbarung · erreichbar täglich 8 bis 20 Uhr.</p>
+        <p class="footer__note" style="margin-top:12px">Termine nach Vereinbarung · erreichbar täglich 8&nbsp;bis 20&nbsp;Uhr.</p>
         <h4 style="margin-top:18px">Rechtliches</h4>
         <ul>
           <li><a href="impressum.html">Impressum</a></li>
