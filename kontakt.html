@@ -393,7 +393,12 @@
 
   fetch('/api/kontakt', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (d) { if (d && d.ready) sec.hidden = false; })
+    .then(function (d) {
+      if (!(d && d.ready)) return;
+      sec.hidden = false;
+      // Direktlink (z. B. aus dem Google-Profil „Online buchen“) springt zum Formular
+      if (location.hash === '#formular') sec.scrollIntoView();
+    })
     .catch(function () {});
 
   function show(msg, ok) {
