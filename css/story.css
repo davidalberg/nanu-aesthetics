@@ -1,0 +1,153 @@
+/* ================= SCROLLYTELLING (Ratgeber-Artikel) =================
+   Aufbau: .scrolly > .scrolly__sticky (Grafik bleibt stehen) + .scrolly__steps (Texte scrollen vorbei).
+   js/story.js setzt pro aktivem Schritt die CSS-Variablen aus data-vars auf .scrolly__visual.
+   Ohne JS: alle Texte lesbar, Grafik zeigt den Ausgangszustand. */
+
+.readbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:120;pointer-events:none}
+.readbar span{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
+
+.story-hero .hero__sub{max-width:56ch}
+.story-hero .art__meta{margin-top:14px}
+.art__body .story__lead,.story__lead{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,4.2vw,1.55rem);line-height:1.42;color:var(--espresso);max-width:40ch;margin:0 0 18px}
+
+.scrolly{position:relative;margin:30px 0 10px}
+.scrolly__sticky{position:sticky;top:10px;z-index:2;background:var(--ivory);padding:8px 0 12px}
+.scrolly__visual{
+  position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-soft);overflow:hidden;height:34vh;min-height:220px;max-height:340px;
+  display:flex;align-items:center;justify-content:center;
+}
+.scrolly__visual svg{width:100%;height:100%;display:block}
+.scrolly__visual *{transition:opacity .7s ease,transform .7s ease,fill .7s ease,stroke-dashoffset .7s ease,left .7s ease,width .7s ease}
+.scrolly__label{
+  position:absolute;left:14px;top:12px;z-index:3;
+  font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  background:rgba(37,29,22,.82);color:var(--accent-deep);border:1px solid var(--line);
+  padding:6px 11px;border-radius:999px;
+}
+.scrolly__big{
+  position:absolute;left:0;right:0;bottom:44px;z-index:3;text-align:center;
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,5vw,2.1rem);color:var(--espresso);
+}
+.scrolly__steps{position:relative;z-index:1}
+.sstep{
+  min-height:62vh;display:flex;align-items:center;padding:24px 0;
+}
+.sstep__card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 20px;box-shadow:var(--shadow-soft);max-width:520px;
+  opacity:.45;transition:opacity .5s ease,border-color .5s ease;
+}
+.sstep.is-active .sstep__card{opacity:1;border-color:var(--accent)}
+.sstep__tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px}
+.sstep__card h2,.sstep__card h3{font-size:clamp(1.2rem,4.4vw,1.5rem);font-weight:700;line-height:1.25;margin:0 0 10px;letter-spacing:-.01em;scroll-margin-top:96px}
+.sstep__card p{line-height:1.7;margin:0 0 10px;color:var(--espresso-soft)}
+.sstep__card p:last-child{margin-bottom:0}
+.sstep__card b{color:var(--espresso)}
+.sstep__card a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px}
+.sstep:first-child{padding-top:8px}
+.sstep:last-child{min-height:50vh}
+
+@media (min-width:900px){
+  .scrolly{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+  .scrolly__sticky{top:110px;order:2;background:none;padding:0}
+  .scrolly__visual{height:auto;aspect-ratio:4/3;max-height:none}
+  .scrolly__steps{order:1}
+  .sstep{min-height:78vh}
+}
+
+/* ohne JS oder bei reduzierter Bewegung: alle Karten voll sichtbar */
+.no-story .sstep__card{opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .sstep__card{opacity:1}
+  .scrolly__visual *{transition:none!important}
+}
+
+/* Zeitachse unter der Grafik */
+.tl{position:absolute;left:22px;right:22px;bottom:30px;height:2px;background:rgba(90,67,52,.35);z-index:3}
+.tl__fill{position:absolute;left:0;top:0;bottom:0;width:calc(var(--t,0)*100%);background:var(--accent)}
+.tl__dot{position:absolute;top:50%;left:calc(var(--t,0)*100%);width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--accent-deep);box-shadow:0 0 0 4px rgba(194,168,120,.2)}
+.tl__marks{position:absolute;left:0;right:0;top:10px;display:flex;justify-content:space-between;font-size:.68rem;font-weight:600;color:#5A4334;letter-spacing:.04em}
+
+/* Infokästen und Vergleich */
+.callout{margin:26px 0;padding:18px 20px;border-left:2px solid var(--accent);background:var(--ivory-deep);border-radius:0 var(--radius) var(--radius) 0;color:var(--espresso-soft);line-height:1.7}
+.callout b{color:var(--espresso)}
+.vs{display:grid;gap:14px;margin:22px 0}
+.vs__col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.vs__col h3{font-size:1.1rem;font-weight:700;margin:0 0 10px}
+.vs__col--accent{border-color:var(--accent)}
+.vs dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:0;font-size:.92rem;line-height:1.55}
+.vs dt{color:var(--muted);font-weight:600}
+.vs dd{margin:0;color:var(--espresso-soft)}
+@media (min-width:760px){.vs{grid-template-columns:1fr 1fr}}
+
+.figpair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.figpair figure{margin:0}
+.figpair .imgwrap{aspect-ratio:3/4;box-shadow:var(--shadow-soft)}
+.figpair figcaption{margin-top:8px;font-size:.82rem;line-height:1.5;color:var(--muted)}
+.figpair figcaption b{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:2px}
+
+/* Werkzeuge: Rechner und Checkliste */
+.tool{margin:30px 0;background:var(--card);border:1px solid var(--accent);border-radius:26px;padding:24px 20px;box-shadow:var(--shadow-soft)}
+.tool h2,.tool h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,5vw,1.9rem);line-height:1.2;margin:0 0 8px}
+.tool p{color:var(--espresso-soft);line-height:1.65}
+.tool label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px}
+.tool input[type=date],.tool select{
+  font:inherit;color:var(--espresso);background:var(--ivory-deep);border:1px solid var(--line);
+  border-radius:12px;padding:11px 14px;width:100%;max-width:320px;color-scheme:dark;
+}
+.tool__out{margin-top:18px;display:grid;gap:10px}
+.tool__row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 14px;padding:12px 14px;border-radius:14px;background:var(--ivory-deep)}
+.tool__row span{color:var(--espresso-soft);font-size:.92rem}
+.tool__row strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tool__row--key{border:1px solid var(--accent)}
+.tool__hint{font-size:.85rem;color:var(--muted);margin-top:12px}
+@media (min-width:860px){.tool{padding:32px 34px}}
+
+.chk{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.chk label{display:flex;gap:12px;align-items:flex-start;margin:0;font-weight:500;font-size:.95rem;line-height:1.5;cursor:pointer;padding:12px 14px;border-radius:14px;background:var(--ivory-deep);border:1px solid transparent}
+.chk input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:var(--accent);color-scheme:dark}
+.chk label:has(input:checked){border-color:var(--accent)}
+.score{margin-top:16px;font-weight:700}
+.score__bar{height:6px;border-radius:6px;background:var(--line);margin-top:8px;overflow:hidden}
+.score__bar span{display:block;height:100%;width:0;background:var(--accent);transition:width .4s ease}
+
+.story-more{display:grid;gap:14px;margin-top:22px}
+@media (min-width:760px){.story-more{grid-template-columns:1fr 1fr}}
+.story-more a{display:block;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-decoration:none;color:var(--espresso)}
+.story-more a span{display:block;font-size:.75rem;color:var(--muted);margin-bottom:4px}
+.story-more a:hover{border-color:var(--accent)}
+
+/* ---------- Grafik: Braue in der Abheilung ---------- */
+.v-brow .halo{opacity:var(--red,0)}
+.v-brow .fresh{opacity:var(--fresh,1)}
+.v-brow .heal{opacity:var(--heal,0)}
+.v-brow .flakes{opacity:var(--flake,0)}
+
+/* ---------- Grafik: Lippen ---------- */
+.v-lips .blush{opacity:var(--blush,0)}
+.v-lips .shade{opacity:var(--shade,0)}
+.v-lips .contour{opacity:var(--line,0)}
+.v-lips .vol{transform:scale(var(--vol,1));transform-origin:200px 150px}
+.v-lips .drop{opacity:var(--drop,0)}
+
+/* ---------- Grafik: Zeitplan ---------- */
+.v-plan .seg{opacity:var(--seg,0)}
+.v-plan .n1{opacity:var(--n1,.25)}
+.v-plan .n2{opacity:var(--n2,.25)}
+.v-plan .n3{opacity:var(--n3,.25)}
+.v-plan .n4{opacity:var(--n4,.25)}
+.v-plan .n5{opacity:var(--n5,.25)}
+.v-plan .prog{stroke-dashoffset:var(--prog,300)}
+
+/* ---------- Grafik: Haut und Pigment ---------- */
+.v-skin .pig{opacity:var(--main,1);transform:translateY(calc(var(--lift,0)*1px))}
+.v-skin .crust{opacity:var(--crust,0)}
+.v-skin .frag{opacity:var(--frag,0)}
+.v-skin .beam{opacity:var(--beam,0)}
+.v-skin .fade{opacity:var(--fadeout,0)}
+
+/* ---------- Grafik: Checkliste ---------- */
+.v-check .ring{stroke-dashoffset:var(--off,565)}
+.v-check .num{font-family:var(--serif)}
+.v-check .scrolly__big{top:50%;bottom:auto;transform:translateY(-62%);font-size:clamp(2rem,7vw,3rem);font-style:normal}
